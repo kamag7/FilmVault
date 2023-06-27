@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct TokenEndpoint: EndpointProtocol {
+    var path: String {
+        "/authentication/token/new"
+    }
+}

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public protocol APIPluginProtocol {
+    func willSend(_ request: URLRequest?)
+    func didReceive(_ response: URLResponse?, data: Data?, queryParams: QueryProtocol?)
+}
+

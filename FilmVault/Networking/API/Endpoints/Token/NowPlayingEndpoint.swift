@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct NowPlayingEndpoint: EndpointProtocol {
+    var path: String {
+        "/movie/now_playing"
+    }
+}
+

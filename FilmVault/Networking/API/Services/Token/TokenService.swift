@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct TokenService: NetworkServiceProtocol {
+    let scheme: ServiceScheme = .https
+    let host: String = Configuration.apiBaseStringUrl
+    let root: String = ""
+    var version: String = Configuration.apiVersion
+}
+

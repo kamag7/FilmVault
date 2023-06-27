@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+struct TokenQuery: QueryProtocol {
+    private enum Constant {
+        static let apiKey = "api_key"
+    }
+    var method: HTTPMethod = .get
+    var endpoint: EndpointProtocol = TokenEndpoint()
+    var service: NetworkServiceProtocol = TokenService()
+    var urlParameters: RequestUrlParameters?
+    var httpParameters: HttpParameterType?
+    var additionalHeaders: [HTTPHeaderField] = []
+
+    init(tokenRequest: TokenRequest) {
+        urlParameters = RequestUrlParameters(params: [Constant.apiKey: [tokenRequest.key]])
+    }
+}

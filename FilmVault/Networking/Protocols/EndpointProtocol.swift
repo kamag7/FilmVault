@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+public protocol EndpointProtocol {
+    var path: String { get }
+}

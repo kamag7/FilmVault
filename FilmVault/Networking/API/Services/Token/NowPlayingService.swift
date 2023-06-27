@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct NowPlayingService: NetworkServiceProtocol {
+    var scheme: ServiceScheme = .https
+    var host: String = Configuration.apiBaseStringUrl
+    var root: String = ""
+    var version: String = "3"
+}

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+final class ImageRequestUrl {
+    static func imageURL(imageStringUrl: String?) -> URL? {
+        guard let imageUrl = imageStringUrl else {
+            return nil
+        }
+        return URL(string: "https://image.tmdb.org/t/p/w500/" + imageUrl)
+    }
+}
